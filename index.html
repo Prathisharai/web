@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glam Lips</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Roboto:wght@400;700&display=swap');
+        
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #FFF0F5;
+            color: #B22222;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+    background: #fefefe;
+    padding: 20px;
+    font-size: 40px;
+    color: rgb(229, 6, 147);
+    font-weight: bold;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centers content horizontally */
+    font-family: 'Great Vibes', cursive;
+    gap: 15px; /* Adds spacing between logo and text */
+}
+
+header img {
+    height: 100px;
+}
+
+
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background: #B22222;
+            padding: 15px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .container {
+            padding: 40px 20px;
+        }
+        .product-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+        .product-card {
+            background: #FFF;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 250px;
+            transition: transform 0.3s ease-in-out;
+        }
+        .product-card:hover {
+            transform: scale(1.05);
+        }
+        .product-card img {
+            width: 100%;
+            border-radius: 10px;
+            height: 250px;
+            object-fit: cover;
+        }
+        .buy-btn {
+            display: block;
+            padding: 10px 20px;
+            background: #B22222;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        .about, .contact {
+            text-align: center;
+            padding: 40px;
+            background: #FF69B4;
+            color: white;
+        }
+        .about h2, .contact h2 {
+            font-size: 28px;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAA+VBMVEX/////AAA3BEc0AEXjAwP/Fxf/29v/+fn/5ub/KCj/9PT/Cwv/n5//JSUtAD82AEb/wcH/ICAYADD/z8//7u7/ior/2NgRACwoADv/paX/QkL/aGj/lpb/4OD/c3P/LS3/Tk4jADeZip/d2N//uLj/WVnt6u5XOmP/fHz/ysr/UVH/Y2PyAgL/amr/r6//k5PIwMu5r73SzNUAACVoUXJ5ZYGKeZE9EEzi3uSUhZpGIlRKJ1f/hISilag/D06Fc41jSG2vo7QvLUhFRVhTQmCnq6u8AACuCQBJEAkRNTRcTGQAEAhNTVc3QkZnDAj/NzcAKCnKISDkISE3aCaXAAAFC0lEQVR4nO3ae3uaSBQHYC6iIALiXeMlaTTGaLTNxjbNpW022266u212+/0/zKICMjCAGpVJnt/7l09G5jknc5gZBjkOAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgPT27t1J0jHs1MVvtVr18jjpMHbIEAVB0AvTTNKB7Mr7mjCn6690GC8Kgk2svk06mJ34IDoZCkb1IuloduBjTVgSa0mHs33HVcHr6F3SAW2dp0ZnqldJB7RtRI0KQu1N0gFt23GBSFC8Tjqgrbsma7Tw6hbEN74a/Zh0QNvmr9EPSQe0dTevvUbv2K7RTCXfzVeyz+jhilzr2arR0qTDL5i3xWCzXB+aVpty3o3qxFejTG1J27yXWSdb8w1PYy60k7sjskbf7zjoNRT5AM9YVTpkU6dE7+WqYBA1Kuwn+FWMgwnyfM+5IcvBtha1G/88yk6NdmkJWha34wGtSaZ0c/9JFD056p/3m0WEVkiCPN/kuGyP2iIFuznp9y8vv+hOjqK4/0zCmKEZWrdcWMNBoJu+Lor69bSvM1ejzYgELWrI332zLXc/n0cNvT/VDbZqNBOdYHiK5KJ54syjojj9ZDBVo7dxGYamSEyoX9w5xtCnolFg54QtG5tgeIqeCfX+SFyuhfr0aJpcRn6nK2QYP4onvz/8cePmKPZv2DnqLq2SYLi83c3Xb38+fn9wcywwdPZEXc7XUF50M7uZU4/f/zKMRZUmm5QXZT+6JiVtdVNZfP729z+zQxqjxk6NRi72AY3T0yfKn4dpTrI/jh5/WHtThuZRLucL9qybHlD22QuV2RVyO9hQ8lzy88c1SzUq+0K15w16js6ThuzfyNWJfe3PB5ZqlKw5xX3qS1NWh/zyMnIYn8hSH/3L0FsKckN66GnJHPoTHHovJIq7NCG++N/XveYQqUJEViYbfZVqkq2eKThHlrq6v/hjkTvugb+ZWEck//lbZmi3dDiF6IdyhpUYbyEe0CaHZfX1KK3pU21eo2Spt3cd9Ro8+1EzMIC28dmseRg1Lr7peBeRbshz9hR+OGjJxpwP51KRtZ6cgRvU5HkddVMjJmvUmUalplySQw4/47TG5XKeK6U8g7jdIJ/D3YQ4+8nGbXe9PLNN+9L0r+UgMlSjXJ6yMevkVk4y65mmGu4gnu8y4vWdB1OcPyWsYvbvcfd1asoZRIa2o3MV6klvj3aWTbIPyN0UU/Yg5mOv3LsW9fm+HH1RxX0J5aQ4SqVmH4fR1yWkRM1xHH5BxbsRclJclClrNepIBx4iLFKdGm627nsyVN1BZLJGHXnaMPJtf8TymHLfqs4gUneu7KBOq9YyUB4P0rIst4rdyZD+FTvFUUpltUZttNeHpmSGHwQTNMX85X9Lwxz/C0RVUlVFUs24k7h2l/4umEEZ4jFWUkzNVDUtOsEeS5u0FXgOpVRF5a0Mo4evUUk64nVllgNm3YGKJEUPYMSaySznLZskWbegxGtSRH5q/N6ORfbRk1WipiZpWkSCHcbXhlA5J0NrLo0aQSXpQDd3wEsaH7tEKC91BGcakjWAMYuE9pITtFKcrRGRk8zTy06Q4+g/gFpi6DRtU5PIBJnff66iGL6ZOdzw3JE5IcPYYfghd10Zyi/dzl5RfnPFW++JRa/+nF+3MytTzOeazeZ48DI3oQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALCx/wHR0Uvf6TLSMQAAAABJRU5ErkJggg==" alt="Glam Lips Logo">
+        <span>Glam Lips</span>
+    </header>
+    <nav>
+        <a href="#about">About</a>
+        <a href="#collection">Collection</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    <div class="about" id="about">
+        <h2>About Us</h2>
+        <p>Discover the perfect shade with Glam Lips – luxurious, long-lasting, and bold lip colors for every occasion.</p>
+    </div>
+    <div class="container" id="collection">
+        <h2>💄 Our Lipstick Collection 💄</h2>
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="data:image/jpeg;base64,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" alt="Ruby Desire Lipstick">
+                <h3>Ruby Desire</h3>
+                <p>A deep red shade that exudes confidence and elegance.</p>
+                <p>💰 Price: ₹999</p>
+                <a href="#" class="buy-btn">Buy Now</a>
+            </div>
+            <div class="product-card">
+                <img src="data:image/jpeg;base64,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" alt="Velvet Peach Lipstick">
+                <h3>Velvet Peach</h3>
+                <p>Soft peachy nude for a perfect everyday glam look.</p>
+                <p>💰 Price: ₹899</p>
+                <a href="#" class="buy-btn">Buy Now</a>
+            </div>
+            <div class="product-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqaGP8hHs3zVMZGugttfkp1NnfEEVygtTwpg&s" alt="Plum Passion Lipstick">
+                <h3>Plum Passion</h3>
+                <p>Bold plum shade to make a dramatic statement.</p>
+                <p>💰 Price: ₹1,099</p>
+                <a href="#" class="buy-btn">Buy Now</a>
+            </div>
+        </div>
+    </div>
+    <div class="contact" id="contact">
+        <h2>Contact Us</h2>
+        <p>Email: support@glamlips.com</p>
+        <p>Phone: +91 98765 43210</p>
+    </div>
+</body>
+</html>
